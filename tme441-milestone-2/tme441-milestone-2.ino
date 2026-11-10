@@ -1,12 +1,13 @@
 /* TME 441
-*  Milestone 2 Solution
+*  Milestone 2 - Tag Following
 *
 *  Navigate to a series of waypoints using camera input.
 *
-*  This library does not include driving and motor control functions. You must
+*  This sketch does not include driving and motor control functions. You must
 *  copy in your own driving.ino and motor_control.h files.
 *
 *  @author Matthew Ford
+*  @version 2026
 */
 #include <Encoder.h>
 #include "motor_control.h"
@@ -29,8 +30,8 @@ int main() {
   init();
 
   // Initialize communication interfaces
-  Serial.begin(9600);
-  Serial3.begin(9600);  // HuskyLens
+  Serial.begin(115200);  // USB serial for debugging
+  Serial3.begin(9600);   // HuskyLens
 
   initMotors();
 
