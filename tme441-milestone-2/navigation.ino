@@ -50,16 +50,16 @@ int pointToTag(int tag_id) {
       return -2;
     } else if (x == -1) {  // Tag not found
       rotateCCW(30);
-      delay(100);
+      delay(200);
     } else if (abs(x - 160) < 10) {  // Tag is centered
       return 1;
     } else {  // Tag not centered. Minor adjustment
       if (x < 160) {
-        rotateCCW(8);
+        rotateCCW(5);
       } else {
-        rotateCCW(-8);
+        rotateCCW(-5);
       }
-      delay(100);
+      delay(200);
     }
   }
   
