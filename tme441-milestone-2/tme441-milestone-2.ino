@@ -12,6 +12,16 @@
 #include "motor_control.h"
 #include "HUSKYLENS.h"
 
+/* A struct is a C++ data type that groups related variables together.
+*  Here, TagPose represents the status, range, and heading of a detected tag.
+*  You may delete this comment and replace it with your own.
+*/
+struct TagPose {
+  int status;   // 1 if tag is found, 0 if not found, -1 if error
+  int range;    // [cm] Range to tag
+  int heading;  // [deg] Heading to tag relative to camera
+};
+
 HUSKYLENS cam;
 
 
